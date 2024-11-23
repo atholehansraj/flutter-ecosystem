@@ -1,0 +1,432 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+nav .flutter-top {
+  height: 3.1rem;
+  width: 100%;
+  background: linear-gradient(to right, #057CFD, #803FF2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 999;
+}
+
+nav .flutter-top p {
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  padding: 1rem 0 1rem 3rem;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  font-size: 0.9em;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  top: 3rem;
+  background-color: #fff;
+  z-index: 343;
+}
+
+.navbar .nav-logo img {
+  max-width: 8rem;
+}
+
+.navbar .nav-item {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-right: 2.2rem;
+}
+
+.navbar .nav-item i {
+  font-size: 1.4rem;
+  opacity: 0.7;
+}
+
+.navbar .nav-item img {
+  font-size: 1em;
+  height: 2em;
+  width: 2em;
+  right: -95%;
+  display: none;
+}
+
+.navbar .nav-item .get-started {
+  text-decoration: none;
+  background-color: #0468D7;
+  padding: 0.8em 2.2rem;
+  border-radius: 25px;
+  color: white;
+}
+
+.navbar .nav-item ul {
+  display: flex;
+  /* gap: 2rem; */
+  align-items: center;
+  list-style-type: none;
+}
+
+.navbar .nav-item ul a {
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+  padding: 0.8em 1rem;
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
+
+.navbar .nav-item ul a:hover {
+  background-color: rgba(0, 0, 0, 0.285);
+  border-radius: 1em;
+  transform: scale(1.05);
+}
+
+/* Media query for mobile screens */
+@media (max-width: 1024px) {
+  .navbar .nav-item ul,
+  .navbar .nav-item .get-started {
+    display: none;
+  }
+  /* Display the menu icon (img) on smaller screens */
+  .navbar .nav-item img {
+    display: initial;
+    /* position: absolute; */
+    right: 1rem;
+    cursor: pointer;
+  }
+  .navbar .nav-item img:active {
+    transform: scale(1);
+  }
+  .navbar .nav-item i {
+    display: none;
+  }
+}
+.view1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 10rem;
+  position: relative;
+  top: 6em;
+  gap: 4rem;
+  background: linear-gradient(to top right, #f9e5ee, #f3fcff);
+}
+.view1 .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.view1 .top > * {
+  flex-basis: 50%;
+  flex-shrink: 0;
+}
+.view1 .top .text {
+  padding-left: 4rem;
+  font-size: 2.2rem;
+  line-height: 1.9em;
+}
+.view1 .top img {
+  width: 27rem;
+  aspect-ratio: 3/2.3;
+}
+.view1 .bottom {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.view1 .bottom p {
+  font-size: 2rem;
+  font-weight: 200;
+  width: 70%;
+  text-align: center;
+}
+
+.view2 {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 11vw;
+}
+.view2 .center {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4em;
+  gap: 2em;
+}
+.view2 .center .card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-right: 3em;
+  gap: 1.5em;
+  border-top: 5px solid #e8eaed;
+}
+.view2 .center .card h2 {
+  margin-top: 1.5em;
+  font-size: 2em;
+}
+.view2 .center .card p {
+  font-size: 1.3em;
+  opacity: 0.6;
+}
+.view2 .center .card img {
+  margin-top: 2em;
+  max-width: 17em;
+}
+
+.view3 {
+  padding: 0 9em;
+}
+.view3 .center-2 {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.view3 .center-2 .left {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0 8rem 0 4rem;
+  gap: 2em;
+}
+.view3 .center-2 .left h2 {
+  font-size: 1.4em;
+  opacity: 0.7;
+}
+.view3 .center-2 .left h1 {
+  font-size: 4em;
+  font-weight: 700;
+}
+.view3 .center-2 .left .para > p {
+  font-size: 1.3em;
+  opacity: 0.8;
+  font-weight: 400;
+}
+.view3 .center-2 .left .btn a {
+  text-decoration: none;
+  padding: 0.6em 1.6em;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+.view3 .center-2 .left .btn #btn-1 {
+  border: 1px solid rgb(23, 95, 167);
+  border-radius: 2em;
+}
+.view3 .center-2 .left .btn #btn-2 {
+  color: #000;
+  font-weight: 700;
+}
+.view3 .center-2 .right img {
+  max-width: 37em;
+}
+
+.view4 {
+  height: 72vh;
+  background: linear-gradient(to right top, #FCFCE2, #F5FBFE);
+  padding: 0 11rem;
+}
+.view4 .center3 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.view4 .center3 img {
+  max-height: 25rem;
+}
+.view4 .center3 .title-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 2rem 0 8rem;
+  gap: 1.9em;
+}
+.view4 .center3 .title-2 h2 {
+  opacity: 0.7;
+}
+.view4 .center3 .title-2 h1 {
+  font-size: 4em;
+  line-height: 1em;
+}
+.view4 .center3 .title-2 p {
+  font-size: 1.3em;
+  opacity: 0.8;
+  margin-right: 2em;
+}
+.view4 .center3 .title-2 button {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  font-size: 0.9em;
+  padding: 0.8em 1.5em;
+  border-radius: 3rem;
+  margin-bottom: 1em;
+  max-width: 12rem;
+  background-color: #057CFD;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.view5 {
+  padding: 0 9em;
+}
+.view5 .center4 {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.view5 .center4 .title-3 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0 8rem 0 4rem;
+  gap: 2em;
+}
+.view5 .center4 .title-3 h2 {
+  font-size: 1.4em;
+  opacity: 0.7;
+}
+.view5 .center4 .title-3 h1 {
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1em;
+}
+.view5 .center4 .title-3 p {
+  font-size: 1.3em;
+  opacity: 0.8;
+  font-weight: 400;
+}
+.view5 .center4 .title-3 a {
+  text-decoration: none;
+  padding: 0.6em 1.8em;
+  font-size: 0.9em;
+  font-weight: 500;
+  border: 1px solid rgb(23, 95, 167);
+  border-radius: 2em;
+  max-width: 8rem;
+}
+.view5 .center4 img {
+  max-width: 31rem;
+}
+
+.view7 {
+  height: 72vh;
+  padding: 5rem 10rem;
+}
+.view7 .center5 {
+  width: 100%;
+  height: 100%;
+  background-color: #042449;
+  border-radius: 3em;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.view7 .center5 .text {
+  color: white;
+  padding: 4rem;
+}
+.view7 .center5 .text h1 {
+  font-size: 4rem;
+}
+.view7 .center5 .text p {
+  font-size: 1.3rem;
+}
+.view7 .center5 .text .btn {
+  padding-top: 3rem;
+}
+.view7 .center5 .text .btn a {
+  text-decoration: none;
+  padding: 0.6em 1.6em;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+.view7 .center5 .text .btn #btn-1 {
+  border: 1px solid rgb(23, 95, 167);
+  border-radius: 2em;
+  background-color: white;
+}
+.view7 .center5 .text .btn #btn-2 {
+  color: #fff;
+  font-weight: 700;
+}
+
+footer .footer {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 3rem;
+}
+footer .footer .top {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer .top .f-item {
+  display: flex;
+  height: 15rem;
+  width: 45rem;
+}
+footer .footer .top .f-item .f-item-tools {
+  margin: 0 0 2em 1em;
+}
+footer .footer .top .f-item .f-item-tools li {
+  list-style: none;
+  width: 13rem;
+  margin-bottom: 0.5em;
+  opacity: 0.8;
+}
+footer .footer .top .f-item .f-item-tools li h2 {
+  font-weight: 300;
+}
+footer .footer .middle {
+  width: 100%;
+  padding-bottom: 2rem;
+}
+footer .footer .middle .footer-social {
+  width: 13vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer .middle .footer-social a img {
+  width: 1.1em;
+  opacity: 0.7;
+}
+footer .footer .bottom {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer .bottom .para {
+  width: 70vw;
+}
+footer .footer .bottom .f-tools {
+  display: flex;
+  gap: 1.5rem;
+}
+footer .footer .bottom .f-tools a {
+  text-decoration: none;
+  color: black;
+}/*# sourceMappingURL=style.css.map */
